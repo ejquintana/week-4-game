@@ -1,6 +1,6 @@
 //Setting the global random number displayed for the user
 $( document ).ready(function(){
-	var usrRandom=Math.floor(Math.random()* 120)
+	var usrRandom=Math.floor(Math.random()* 101+19)
 	$('#number').text(usrRandom);
 
 //	Global number vars (Number generator array, wins/losses, total)
@@ -20,7 +20,7 @@ crystalRandNums();
 
 //Game Reset after win or loss - Gives New Random Value
 function gameReset(){
-        usrRandom=Math.floor(Math.random()* 120);
+        usrRandom=Math.floor(Math.random()* 101+19);
         // console.log(usrRandom)
         $('#number').text(usrRandom);
         NumGenerator = [];
