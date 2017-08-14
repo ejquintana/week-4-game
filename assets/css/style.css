@@ -1,17 +1,13 @@
 body {
 	background-image: url("https://previews.123rf.com/images/kaman123/kaman1231108/kaman123110800066/10232600-Ice-background-abstract-blue-bright-cold-color-cool-crystal-decoration-design-Stock-Photo.jpg");
 }
-h1 {
-	background-image: url("https://www.shutterstock.com/image-photo/white-cement-texture-stone-concreterock-plastered-568004008?src=SoetvGPKwHXqIvqiHv7F6w-1-59");
-	/*background-color: blue;*/
-}
 .jumbotron{
 	text-align: center;
-	margin-top: 10px;
-	background-color: blue;
+	margin-top: 20px;
+	opacity: .7;
 }
-.panel-heading{
-	background-color: #F1D487;
+.panel-default{
+	opacity: .8 ;
 }
 #panelStyle{
 	float:left;
@@ -21,6 +17,5 @@ h1 {
 img {
 	height: 150px;
 	width: 150px; 
-
 }
 

@@ -1,72 +1,61 @@
-
 <!DOCTYPE html>
-<html>
-<!-- Latest compiled and minified CSS -->
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title>Crystal Collector</title>
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css">
-<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-	<script src="//code.jquery.com/jquery.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
+</head>
+ <body>
+	<div class="container">
+		<div class= "jumbotron">
+			<h1>Crystal Collector Game</h1>
+		</div>
+		<!--  Instructions Panel  -->
+		<div class="panel panel-default">
+			<div class= "panel-heading">
+				<strong><div class="panel-title">Instructions</div></strong>
+			</div>
+		  <div class= "panel-body">
+			<ul>
+				<li><p>At the start of the game you will  be given a random number.</p></li>
 
-	<head>
-		<title>Crystal Collector</title>
-	</head>
-	<body>
-		<div class="container">
-			<div class= "jumbotron">
-				<h1>Crystal Collector Game</h1>
-			</div>
-			<!--  Instructions Panel  -->
-			<div class="panel panel-default">
-				<div class= "panel-heading">
-					<strong><div class="panel-title">Instructions</div></strong>
-				</div>
+				<li><p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p></li>
+
+				<li><p>You win the game by matching your total score to the random number. You lose if your total score goes above the random number.</p></li>
 				
-				<div class= "panel-body">
-				<ul>
-					<li><p>You will be given a random number at the start of the game.</p></li>
-	
-					<li><p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p></li>
+				<li><p>The value of each crystal is hidden from you until you click on it.</p></li>
 					
-					<li><p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p></li>
-				
-					<li><p>The value of each crystal is hidden from you until you click on it.</p></li>
-					
-					<li><p>Each time when the game starts, the game will change the values of each crystal.</p></li>
-				</ul>
-				</div>
-			</div>
-			<div class="panel panel-default" id= "panelStyle">
-				<div class= "panel-body">
-					<img src="https://s-media-cache-ak0.pinimg.com/originals/29/73/de/2973de78f5a1be8301abd77243d9bc8a.gif" id="one">
-					<img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/c738f219975931.562e3974ef9a5.gif" class=JewelStyle id="two">
-					<img src="https://hiddenlighthouse.files.wordpress.com/2009/12/startetrahedron.gif" class=JewelStyle id= "three">
-					<img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/89a50619975931.562e397510cc1.gif" class=JewelStyle id= "four">
-				</div>
-			</div>
-			<div class="panel panel-default" id= "panelStyle">
-				<div class= "panel-body">
-					<h4 id = "firstbox">Number to match: <span id= "number"></span></h4>
-					<h4 id = "secondbox">Your number: <span id="Combined"></span></h4>
-				</div>
-			</div>
-			<div class="panel panel-default" id= "panelStyle">
-				<div class= "panel-body">
-					<h4>
-					Wins: <span id= "numberWins"></span>
-					<br>
-					Losses: <span id= "numberLosses"></span>
-					</h4>
-				</div>
+				<li><p>Each time when the game starts, the game will change the values of each crystal.</p></li>
+			</ul>
+		  </div>
+		</div>
+		<div class="panel panel-default" id= "panelStyle">
+			<div class= "panel-body">
+				<img src="https://s-media-cache-ak0.pinimg.com/originals/29/73/de/2973de78f5a1be8301abd77243d9bc8a.gif" id="cOne">
+				<img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/c738f219975931.562e3974ef9a5.gif" id="cTwo">
+				<img src="https://hiddenlighthouse.files.wordpress.com/2009/12/startetrahedron.gif" id= "cThree">
+				<img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/89a50619975931.562e397510cc1.gif" id= "cFour">
 			</div>
 		</div>
-		
-		<script src="http://code.jquery.com/jquery-3.2.1.min.js"
+		<div class="panel panel-default" id= "panelStyle">
+			<div class= "panel-body">
+				<h4 id = "firstbox">Number to match: <span id= "number"></span></h4>
+				<h4 id = "secondbox">Your number: <span id="score"></span></h4>
+			</div>
+		</div>
+		<div class="panel panel-default" id= "panelStyle">
+			<div class= "panel-body">
+				<h4> Wins: <span id= "countWins"></span>
+				<br> Losses: <span id= "countLosses"></span></h4>
+			</div>
+		</div>
+	</div>
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js"
   		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   		crossorigin="anonymous"></script>
-		</script>
-		<script src="assets/javascript/game.js"></script>
-	</body>
+  <script src="assets/javascript/game.js"></script>
+ </body>
 </html>
